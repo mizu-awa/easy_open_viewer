@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="eo_view.css">
+<script type="text/javascript" src="eo_view_control.js"></script>
+<script type="text/javascript" src="eo_view_img.js"></script>
+
+<title></title>
+</head>
+
+<body>
+<div id="all">
+
+<header><!-- ヘッダー-->
+</header>
+
+<main>
+
+	<!--ユーザが操作してもよい領域ここから-->
+	<div id="user_change">
+		いろいろもじ
+		<div onclick="eo_view_open()">開く</div>
+
+		<div id="eo_view" onscroll="eo_view_onScroll()">
+			<div class="page_list" onclick="eo_view_close()">
+			</div>
+			<div class="bottom_item">
+				<p class="page_counter"></p>
+				<input type=range min=1 step=1 value=1 class="page_slider" onchange="eo_view_onSlide()">
+			</div>
+			<a class="right_button" onclick="eo_view_scroll_right()"></a>
+			<a class="left_button" onclick="eo_view_scroll_left()"></a>
+		</div>
+	</div>
+	<!--ここまで-->
+	<div id="access_counter"></div>
+
+</main>
+
+</div>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+﻿@charset "utf-8";/*文字コードの設定*/
+
+#eo_view{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,0.8);
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+}
+
+#eo_view a{
+	display: block;
+	width: 5%;
+	height:100%;
+	position: fixed;
+	opacity: 0.05;
+	background-color: white;
+	top:0;
+}
+#eo_view a:hover{
+	opacity: 0.5;
+}
+
+#eo_view .left_button{
+	left:0;
+}
+
+#eo_view .right_button{
+	right:0;
+}
+
+#eo_view .page_list{
+	display: inline-block;
+	white-space: nowrap;
+}
+
+#eo_view .page{
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	width: 50vw;
+	height: 100vh;
+	padding-bottom: 5em;
+}
+
+#eo_view .page:nth-child(even) {
+	text-align: right;
+}
+#eo_view .page:nth-child(odd) {
+	text-align: left;
+}
+#eo_view .page:first-child{
+	width: 100vw;
+	text-align: center;
+}
+
+#eo_view  img{
+	vertical-align: top;
+	display: inline-block;
+	position: relative;
+	max-width: 50vw;
+	max-height: 84vh; 
+	top: 44vh;
+	transform: translateY(-50%);
+}
+
+#eo_view .bottom_item{
+	width: 100%;
+	height: 10%;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+
+}
+#eo_view .page_slider{
+	width: 80%;
+	height: 20%;
+	margin: 0;
+	padding: 0;
+}
+#eo_view .page_counter{
+	margin: 0;
+	padding: 0;
+	text-shadow: 1px 1px 0 white, 1px -1px 0 white,-1px 1px 0 white, -1px -1px 0 white;
+}
+
+@media(max-width: 480px){
+	#eo_view .page{
+		width:100vw;
+	}
+	#eo_view  img{
+		max-width: 100%;
+	}
+	#eo_view .page:nth-child(even),#eo_view .page:nth-child(odd){
+		text-align: center;
+	}
+	#eo_view .left_button,#eo_view .right_button{
+		display:none;
+	}
+}
